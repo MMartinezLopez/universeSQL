@@ -267,65 +267,116 @@ ALTER TABLE ONLY public.star_type ALTER COLUMN star_type_id SET DEFAULT nextval(
 -- Data for Name: galaxy; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.galaxy VALUES (1, 'via lactea', NULL, NULL, NULL, 'Galileo Galilei');
+INSERT INTO public.galaxy VALUES (2, 'Andromeda', NULL, NULL, NULL, NULL);
+INSERT INTO public.galaxy VALUES (3, 'Canis Majoris', NULL, NULL, 25000.00, '2Mass');
+INSERT INTO public.galaxy VALUES (4, 'Eliptica de Sagitario', NULL, NULL, 70000.00, 'Rodrigo Ibata');
+INSERT INTO public.galaxy VALUES (5, 'Gran nube de Magallanes', NULL, NULL, 163000.00, 'Abd Al-Rahman Al Sufi');
+INSERT INTO public.galaxy VALUES (6, 'Galaxia del Triangulo', NULL, NULL, 2800000.00, 'Giovanni B Hodierna');
 
 
 --
 -- Data for Name: moon; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.moon VALUES (1, 'Luna', 1, 365565.00, 1137.10);
+INSERT INTO public.moon VALUES (2, 'Fobos', 4, 9380.00, 11267.00);
+INSERT INTO public.moon VALUES (3, 'Deimos', 4, 23460.00, 6.22);
+INSERT INTO public.moon VALUES (4, 'Io', 5, 421800.00, 1821.00);
+INSERT INTO public.moon VALUES (5, 'Europa', 5, 671100.00, 1560.80);
+INSERT INTO public.moon VALUES (6, 'Ganymede', 5, 1070400.00, 2634.30);
+INSERT INTO public.moon VALUES (7, 'Callisto', 5, 1882700.00, 2410.00);
+INSERT INTO public.moon VALUES (8, 'Titan', 6, 1221870.00, 2576.00);
+INSERT INTO public.moon VALUES (9, 'Rea', 6, 527070.00, 763.80);
+INSERT INTO public.moon VALUES (10, 'Dione', 6, 377420.00, 3561.40);
+INSERT INTO public.moon VALUES (11, 'Tetis', 6, 294670.00, 533.70);
+INSERT INTO public.moon VALUES (12, 'Mimas', 6, 185540.00, 198.60);
+INSERT INTO public.moon VALUES (13, 'Enceladus', 6, 238670.00, 252.30);
+INSERT INTO public.moon VALUES (14, 'Febe', 7, 12947780.00, 106.70);
+INSERT INTO public.moon VALUES (15, 'Jano', 7, 151460.00, 89.50);
+INSERT INTO public.moon VALUES (16, 'Helena', 7, 377420.00, 17.60);
+INSERT INTO public.moon VALUES (17, 'Epimeteo', 7, 151410.00, 58.10);
+INSERT INTO public.moon VALUES (18, 'Calipso', 7, 294710.00, 10.70);
+INSERT INTO public.moon VALUES (19, 'Pandora', 7, 141720.00, 15.10);
+INSERT INTO public.moon VALUES (20, 'Atlas', 7, 137670.00, 15.10);
 
 
 --
 -- Data for Name: planet; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.planet VALUES (1, 'Tierra', 1, true, 1, true);
+INSERT INTO public.planet VALUES (2, 'Mercurio', 0, false, 1, false);
+INSERT INTO public.planet VALUES (3, 'Venus', 0, false, 1, false);
+INSERT INTO public.planet VALUES (5, 'Jupiter', 79, false, 1, true);
+INSERT INTO public.planet VALUES (4, 'Marte', 2, false, 1, true);
+INSERT INTO public.planet VALUES (6, 'Saturno', 83, false, 1, true);
+INSERT INTO public.planet VALUES (7, 'Urano', 27, false, 1, true);
+INSERT INTO public.planet VALUES (8, 'Neptuno', 14, false, 1, true);
+INSERT INTO public.planet VALUES (9, 'Pluton', 3, false, 1, true);
+INSERT INTO public.planet VALUES (10, 'Eris', 1, false, 1, true);
+INSERT INTO public.planet VALUES (11, 'Alfa Centauri Cb', 0, false, 3, true);
+INSERT INTO public.planet VALUES (12, 'Haumea', 2, false, 1, true);
 
 
 --
 -- Data for Name: star; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.star VALUES (1, 'Sol', 1, 5, 4567.90);
+INSERT INTO public.star VALUES (2, 'Alfa Centauri A', 1, 5, 5700.00);
+INSERT INTO public.star VALUES (3, 'Proxima Centauri', 1, 7, 4850.00);
+INSERT INTO public.star VALUES (4, 'Zetta Puppis', 1, 1, 3202.00);
+INSERT INTO public.star VALUES (5, 'Spica', 1, 6, 0.00);
+INSERT INTO public.star VALUES (6, 'Alpheratz', 2, 2, NULL);
 
 
 --
 -- Data for Name: star_type; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.star_type VALUES (1, 'Tipo O', 'Color: Azul | Temperatura: 30000°C');
+INSERT INTO public.star_type VALUES (2, 'Tipo B', 'Color: Blanco/Azul | Temperatura: 20000°C');
+INSERT INTO public.star_type VALUES (3, 'Tipo A', 'Color: Blanco | Temperatura: 10000°C');
+INSERT INTO public.star_type VALUES (4, 'Tipo F', 'Color: Blanco/Amarillo | Temperatura: 7000°C');
+INSERT INTO public.star_type VALUES (5, 'Tipo G', 'Color: Amarillo | Temperatura: 6000°C');
+INSERT INTO public.star_type VALUES (6, 'Tipo K', 'Color: Naranja | Temperatura: 4000°C');
+INSERT INTO public.star_type VALUES (7, 'Tipo M', 'Color: Rojo | Temperatura: 3000°C');
 
 
 --
 -- Name: galaxy_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.galaxy_id_seq', 1, false);
+SELECT pg_catalog.setval('public.galaxy_id_seq', 6, true);
 
 
 --
 -- Name: moon_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.moon_id_seq', 1, false);
+SELECT pg_catalog.setval('public.moon_id_seq', 20, true);
 
 
 --
 -- Name: planet_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.planet_id_seq', 1, false);
+SELECT pg_catalog.setval('public.planet_id_seq', 12, true);
 
 
 --
 -- Name: star_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.star_id_seq', 1, false);
+SELECT pg_catalog.setval('public.star_id_seq', 6, true);
 
 
 --
 -- Name: star_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.star_type_id_seq', 1, false);
+SELECT pg_catalog.setval('public.star_type_id_seq', 7, true);
 
 
 --
@@ -443,4 +494,3 @@ ALTER TABLE ONLY public.star
 --
 -- PostgreSQL database dump complete
 --
-
